@@ -19,12 +19,12 @@ namespace travel
 
         private string[] GetBlogIds()
         {
-            return new string[] { "hung", "sang", "tài" };
+            return new string[] { "hung", "sang", "tài" };//output mang string
         }
 
         private void RegisterBlogIdsScript(string[] blogIdArray)
         {
-  
+         
             string jsonBlogIds = JsonConvert.SerializeObject(blogIdArray);
             string script = $"var blogIds = {jsonBlogIds}; console.log('Blog IDs:', blogIds);";
 
