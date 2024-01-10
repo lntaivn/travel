@@ -86,6 +86,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="admin\admin_Create_Update.aspx" />
+    <Content Include="admin\home.aspx" />
+    <Content Include="css\admin.css" />
+    <Content Include="css\admin_Create_Update.css" />
     <Content Include="css\layout.css" />
     <Content Include="css\autocomlate.css" />
     <Content Include="css\layout_post.css" />
@@ -99,6 +103,27 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="admin\admin_Create_Update.aspx.cs">
+      <DependentUpon>admin_Create_Update.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\admin_Create_Update.aspx.designer.cs">
+      <DependentUpon>admin_Create_Update.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\home.aspx.cs">
+      <DependentUpon>home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\home.aspx.designer.cs">
+      <DependentUpon>home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Create_Update.Master.cs">
+      <DependentUpon>Create_Update.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Create_Update.Master.designer.cs">
+      <DependentUpon>Create_Update.Master</DependentUpon>
+    </Compile>
     <Compile Include="MT_detail.aspx.cs">
       <DependentUpon>MT_detail.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -121,6 +146,13 @@
     <Compile Include="Template.Master.designer.cs">
       <DependentUpon>Template.Master</DependentUpon>
     </Compile>
+    <Compile Include="template_admin.Master.cs">
+      <DependentUpon>template_admin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="template_admin.Master.designer.cs">
+      <DependentUpon>template_admin.Master</DependentUpon>
+    </Compile>
     <Compile Include="template_detail.Master.cs">
       <DependentUpon>template_detail.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -137,9 +169,11 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Create_Update.Master" />
     <None Include="packages.config" />
     <Content Include="Template.Master" />
     <Content Include="template_detail.Master" />
+    <Content Include="template_admin.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

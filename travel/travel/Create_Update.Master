@@ -1,0 +1,42 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Create_Update.master.cs" Inherits="travel.Create_Update" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+     <link rel="stylesheet" type="text/css" href="css/admin_Create_Update.css" />
+</head>
+<body>
+    <form id="form1" runat="server">
+         <div class="main__Create_Update">
+            <div class="header__Create_Update">
+                <ul>
+                    <li>
+                       <a href="a">Quay lại</a>
+                    </li>
+                </ul>
+                <nav>
+                    <ul>
+                        <li>
+                            
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="flex-container">
+                <div class="nav__Create_Update">
+
+                </div>
+                <div class="body__Create_Update">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+
+                    </asp:ContentPlaceHolder>
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

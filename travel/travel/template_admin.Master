@@ -1,0 +1,37 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="template_admin.master.cs" Inherits="travel.template_admin" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link rel="stylesheet" type="text/css" href="css/admin.css" />
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="admin__layout_main">
+            <div class="admin__layout_header">
+                <ul>
+                    <li>
+                        Trang chủ
+                    </li>
+                </ul>
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="a">Tạo dự án</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="admin__layout_body">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolderAdmin" runat="server">
+                       
+                </asp:ContentPlaceHolder>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

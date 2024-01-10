@@ -1,5 +1,14 @@
 ﻿
 
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font: 16px Arial;
+    width: 100%;
+}
+
 .content {
     display: flex; /* Sử dụng flexbox để tự động căn giữa các cột */
 }
