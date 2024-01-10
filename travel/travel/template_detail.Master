@@ -8,28 +8,40 @@
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
     <link rel="stylesheet" type="text/css" href="css/layout_post.css" />
-   
+    <link rel="stylesheet" type="text/css" href="css/detail.css" />
+
 </head>
 <body>
     <form id="form1" runat="server">
         <div>
             <div class="main">
-                <div class="header_post">
+                <div class="header_post" style="display: flex; align-items: center; position: fixed; width: 100%; top: 0;">
+                    <ul style="list-style-type: none; padding: 0; margin: 0;">
+                        <li style="display: inline-block; margin-left: 20px;">
+                            <a href="/TrangChu.aspx" style="color: white; font-weight: bold; text-decoration: none;">Trang chủ</a>
+                        </li>
+                        <!-- Add more <li> elements for additional menu items -->
+                    </ul>
                 </div>
-                <div class="main_post_tatail">
-                    <div>
-                         <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+                <div class="main_post_tatail" style="margin-top: 100px;">
+                    <div class="main_post_tatail_txt">
+                        <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
                     </div>
                 </div>
                 <div class="body_post">
                     <div class="body_post_content">
                         <asp:ContentPlaceHolder ID="ContentPlaceHolderPost" runat="server">
-                        
                         </asp:ContentPlaceHolder>
                     </div>
                     <div class="body_post_top10">
+                        <%-- hien ban do --%>
+                        <iframe
+                    width="600"
+                    height="450"
+                    frameborder="0" style="border:0"
+                    src="https://www.google.com/maps/embed/v1/place?q=Hanoi" >
+                </iframe>
                     </div>
-
                 </div>
                 <div class="footer_post">
                 </div>
@@ -37,5 +49,4 @@
 
         </div>
     </form>
-</body>
-</html>
+</body>html>

@@ -21,40 +21,28 @@ namespace travel
             string[] blogIdArray = GetBlogIds();
 
             RegisterBlogIdsScript(blogIdArray);
-<<<<<<< HEAD
-=======
+
             if (!IsPostBack)
             {
                 BindMenuData();
             }
         }
->>>>>>> c4dd68dca66a1f7890f59724e1907d9bdbde9095
 
-        }
-        
-        private string[] GetBlogIds()
+        protected void btnSearch_Click(object sender, EventArgs e)
         {
-<<<<<<< HEAD
-            Response.Write("dc");
-            String scnn = ConfigurationManager.AppSettings["conn"].ToString();
-            SqlConnection conn = new SqlConnection(scnn);
-            SqlCommand cmd = new SqlCommand("SELECT * FROM location", conn); // Sửa câu lệnh SQL ở đây
-
-            DataTable dt = new DataTable();
-
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
-            da.Fill(dt);
-
-            // Tạo một List để chứa các tên địa điểm
-            List<string> locationNames = new List<string>();
-
-            foreach (DataRow row in dt.Rows)
+            string text = myInput.Text.Trim();
+            if (text !="")
             {
-                locationNames.Add(row["name"].ToString());
+                Response.Redirect($"searchByTitle.aspx?search={text}");
+
             }
 
-            return locationNames.ToArray();
-=======
+        }
+
+
+
+        private string[] GetBlogIds()
+        {
             List<string> blogTitles = new List<string>();
 
             string connectionString = ConfigurationManager.ConnectionStrings["DuLichConnectionString"].ConnectionString;
@@ -79,17 +67,11 @@ namespace travel
             }
 
             return blogTitles.ToArray();
->>>>>>> c4dd68dca66a1f7890f59724e1907d9bdbde9095
         }
 
 
         private void RegisterBlogIdsScript(string[] blogIdArray)
         {
-<<<<<<< HEAD
-
-=======
-         
->>>>>>> c4dd68dca66a1f7890f59724e1907d9bdbde9095
             string jsonBlogIds = JsonConvert.SerializeObject(blogIdArray);
             string script = $"var blogIds = {jsonBlogIds}; console.log('Blog IDs:', blogIds);";
 

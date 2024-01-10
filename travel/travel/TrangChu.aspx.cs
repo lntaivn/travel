@@ -21,7 +21,7 @@ namespace travel
             {
                 connection.Open();
 
-                string query = "SELECT * FROM blog";
+                string query = "SELECT b.id_post, b.banner, b.summary, b.title, c.name as category, ad.name as admin, l.name as location  FROM blog as b \r\njoin category as c on b.id_category = c.id_category \r\njoin admin as ad on b.id_admin = ad.id_admin\r\njoin location as l on b.id_location = l.id_location";
 
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
@@ -31,11 +31,19 @@ namespace travel
                         {
                             string _id = reader["id_post"].ToString();
                             string title = reader["title"].ToString();
-                            string content = reader["content"].ToString();
+                            string admin = reader["admin"].ToString();
+                            string location = reader["location"].ToString();
+                            string content = reader["summary"].ToString();
                             string bannerUrl = reader["banner"].ToString();
                             string urldemo = "img_design/demo1.png";
 
-                            blog.Add($"<a href='post_details.aspx?id={_id}' class='blogContainer__card'><img src='{urldemo}' alt='Blog Image'><h2>{title}</h2><p>{content}</p></a>");
+                            blog.Add($"" +
+                                $"<a href='MT_detail.aspx?id={_id}' class='blogContainer__card'>" +
+                                $"<img src='{urldemo}' alt='Blog Image'>" +
+                                $"<div style=' padding: 20px; gap:10px; display: flex;'><p>{admin}</p>" +
+                                $"<p> -  {location}</p></div>" +
+                                $"<h3 style='color: #003C71; text-align: center; padding: 0 10px;'>{title}</h3><div  style='padding:0 20px;width: 100%;text-align:justify; style='color: #000;''>{content}</div>" +
+                                $"</a>");
                         }
                     }
                 }
@@ -51,6 +59,7 @@ namespace travel
                     contentPlaceHolder1.Controls.Add(new LiteralControl(blogEntry));
                 }
             }
+         
         }
     }
 }
