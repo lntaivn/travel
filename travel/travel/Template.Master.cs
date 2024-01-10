@@ -53,7 +53,7 @@ namespace travel
 
         private void RegisterBlogIdsScript(string[] blogIdArray)
         {
-  
+         
             string jsonBlogIds = JsonConvert.SerializeObject(blogIdArray);
             string script = $"var blogIds = {jsonBlogIds}; console.log('Blog IDs:', blogIds);";
 
