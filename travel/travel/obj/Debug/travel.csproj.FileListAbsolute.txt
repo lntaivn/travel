@@ -59,6 +59,7 @@ C:\Users\Admin\OneDrive\Máy tính\asp_\travel\travel\travel\obj\Debug\travel.dl
 C:\Users\Admin\OneDrive\Máy tính\asp_\travel\travel\travel\obj\Debug\travel.pdb
 C:\Users\Admin\OneDrive\Máy tính\asp_\travel\travel\travel\bin\Newtonsoft.Json.dll
 C:\Users\Admin\OneDrive\Máy tính\asp_\travel\travel\travel\bin\Newtonsoft.Json.xml
+<<<<<<< HEAD
 D:\.net core\travel\travel\travel\bin\travel.dll.config
 D:\.net core\travel\travel\travel\bin\travel.dll
 D:\.net core\travel\travel\travel\bin\travel.pdb
@@ -124,9 +125,33 @@ D:\.net core\travel\travel\travel\bin\System.Buffers.xml
 D:\.net core\travel\travel\travel\bin\System.Memory.xml
 D:\.net core\travel\travel\travel\bin\System.Numerics.Vectors.xml
 D:\.net core\travel\travel\travel\bin\System.Runtime.CompilerServices.Unsafe.xml
+=======
+<<<<<<< HEAD
+C:\Users\Admin\OneDrive\Máy tính\asp_\travel\travel\travel\bin\Markdig.dll
+C:\Users\Admin\OneDrive\Máy tính\asp_\travel\travel\travel\bin\System.Buffers.dll
+C:\Users\Admin\OneDrive\Máy tính\asp_\travel\travel\travel\bin\System.Memory.dll
+C:\Users\Admin\OneDrive\Máy tính\asp_\travel\travel\travel\bin\System.Numerics.Vectors.dll
+C:\Users\Admin\OneDrive\Máy tính\asp_\travel\travel\travel\bin\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Admin\OneDrive\Máy tính\asp_\travel\travel\travel\bin\Markdig.xml
+C:\Users\Admin\OneDrive\Máy tính\asp_\travel\travel\travel\bin\System.Buffers.xml
+C:\Users\Admin\OneDrive\Máy tính\asp_\travel\travel\travel\bin\System.Memory.xml
+C:\Users\Admin\OneDrive\Máy tính\asp_\travel\travel\travel\bin\System.Numerics.Vectors.xml
+C:\Users\Admin\OneDrive\Máy tính\asp_\travel\travel\travel\bin\System.Runtime.CompilerServices.Unsafe.xml
+=======
+D:\.net core\travel\travel\travel\bin\travel.dll.config
+D:\.net core\travel\travel\travel\bin\travel.dll
+D:\.net core\travel\travel\travel\bin\travel.pdb
+D:\.net core\travel\travel\travel\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\.net core\travel\travel\travel\bin\Newtonsoft.Json.dll
+D:\.net core\travel\travel\travel\bin\Newtonsoft.Json.xml
+>>>>>>> c4dd68dca66a1f7890f59724e1907d9bdbde9095
 D:\.net core\travel\travel\travel\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 D:\.net core\travel\travel\travel\obj\Debug\travel.csproj.AssemblyReference.cache
 D:\.net core\travel\travel\travel\obj\Debug\travel.csproj.CoreCompileInputs.cache
 D:\.net core\travel\travel\travel\obj\Debug\travel.csproj.CopyComplete
 D:\.net core\travel\travel\travel\obj\Debug\travel.dll
 D:\.net core\travel\travel\travel\obj\Debug\travel.pdb
+<<<<<<< HEAD
+=======
+>>>>>>> e92fdb0b199a9b3ea02cce4008d7126cee6fdc32
+>>>>>>> c4dd68dca66a1f7890f59724e1907d9bdbde9095
