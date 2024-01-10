@@ -60,7 +60,9 @@
                 </tr>
 
             </table>
-
+            <div>
+            <asp:ContentPlaceHolder ID="markdownContentPlaceholder" runat="server"></asp:ContentPlaceHolder>
+        </div>
 
         </div>
     </form>
