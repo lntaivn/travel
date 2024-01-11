@@ -34,14 +34,8 @@
                         </asp:ContentPlaceHolder>
                     </div>
                     <div class="body_post_top10">
-                        <%-- hien ban do --%>
-                        <iframe
-                    width="600"
-                    height="450"
-                    frameborder="0" style="border:0"
-                    src="https://www.google.com/maps/embed/v1/place?q=Hanoi" >
-                </iframe>
                     </div>
+
                 </div>
                 <div class="footer_post">
                 </div>
