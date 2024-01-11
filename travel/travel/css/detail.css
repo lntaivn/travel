@@ -1,0 +1,28 @@
+﻿.blogContainer__detail
+{
+    width: 100%;
+    height: 100%;
+    font-family: sans-serif;
+    line-height: 1.25;
+    text-align: justify;
+}
+
+.blogContainer__detail img{
+    width: 100%;
+    height: 350px;
+}
+.contentHTML{
+    width: 100%;
+    height: auto;
+    padding: 30px 40px;
+    
+}
+
+.blogContainer__detail h2 {
+    font-weight: bold;
+    color: #003C71;
+}
+
+.blogContainer__detail b {
+    padding-left: 14px;
+}

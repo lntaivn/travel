@@ -43,9 +43,25 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Markdig, Version=0.34.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Markdig.0.34.0\lib\net462\Markdig.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.5.3\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
     </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
@@ -70,18 +86,93 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="autocomlate.css" />
+<<<<<<< HEAD
+    <Content Include="admin\admin_Create_Update.aspx" />
+    <Content Include="admin\home.aspx" />
+    <Content Include="css\admin.css" />
+    <Content Include="css\admin_Create_Update.css" />
+=======
+    <Content Include="CardByCategory.aspx" />
+    <Content Include="css\detail.css" />
+>>>>>>> 5bb7f41ae201b630d5377b1ed18b4795b4c4731e
+    <Content Include="css\layout.css" />
+    <Content Include="css\autocomlate.css" />
+    <Content Include="css\layout_post.css" />
+    <Content Include="img_design\demo1.png" />
+    <Content Include="img_design\header.jpg" />
+    <Content Include="img_design\header_banner.jpg" />
+    <Content Include="js\autocomplate.js" />
+    <Content Include="MT_detail.aspx" />
+    <Content Include="searchByTitle.aspx" />
     <Content Include="TrangChu.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
+    <Compile Include="admin\admin_Create_Update.aspx.cs">
+      <DependentUpon>admin_Create_Update.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\admin_Create_Update.aspx.designer.cs">
+      <DependentUpon>admin_Create_Update.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\home.aspx.cs">
+      <DependentUpon>home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\home.aspx.designer.cs">
+      <DependentUpon>home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Create_Update.Master.cs">
+      <DependentUpon>Create_Update.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Create_Update.Master.designer.cs">
+      <DependentUpon>Create_Update.Master</DependentUpon>
+=======
+    <Compile Include="CardByCategory.aspx.cs">
+      <DependentUpon>CardByCategory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CardByCategory.aspx.designer.cs">
+      <DependentUpon>CardByCategory.aspx</DependentUpon>
+>>>>>>> 5bb7f41ae201b630d5377b1ed18b4795b4c4731e
+    </Compile>
+    <Compile Include="MT_detail.aspx.cs">
+      <DependentUpon>MT_detail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MT_detail.aspx.designer.cs">
+      <DependentUpon>MT_detail.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="searchByTitle.aspx.cs">
+      <DependentUpon>searchByTitle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="searchByTitle.aspx.designer.cs">
+      <DependentUpon>searchByTitle.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Template.Master.cs">
       <DependentUpon>Template.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Template.Master.designer.cs">
       <DependentUpon>Template.Master</DependentUpon>
+    </Compile>
+    <Compile Include="template_admin.Master.cs">
+      <DependentUpon>template_admin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="template_admin.Master.designer.cs">
+      <DependentUpon>template_admin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="template_detail.Master.cs">
+      <DependentUpon>template_detail.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="template_detail.Master.designer.cs">
+      <DependentUpon>template_detail.Master</DependentUpon>
     </Compile>
     <Compile Include="TrangChu.aspx.cs">
       <DependentUpon>TrangChu.aspx</DependentUpon>
@@ -92,14 +183,20 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Create_Update.Master" />
     <None Include="packages.config" />
     <Content Include="Template.Master" />
+    <Content Include="template_detail.Master" />
+    <Content Include="template_admin.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="img_post\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
