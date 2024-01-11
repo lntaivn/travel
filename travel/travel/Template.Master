@@ -21,7 +21,7 @@
                 <div>
                     <nav class="site-nav">
                         <ul>
-                            <li><a style="color:white; font-weight:bold">Trang chủ</a></li>
+                            <li><a href="/TrangChu.aspx" style="color:white; font-weight:bold; margin:auto">Trang chủ</a></li>
                         </ul>
 
                     </nav>
@@ -29,15 +29,16 @@
                 <div class="header__template_body">
                     <div class="header__template_autocomplete">
                         <div class="autocomplete">
-                            <input id="myInput" type="text" name="myCountry" placeholder="Địa điểm">
+                            <asp:TextBox ID="myInput" name="myCountry" runat="server" placeholder="Tiêu đề"></asp:TextBox>
+                            <asp:RequiredFieldValidator  ID="rfvSreach" runat="server" ControlToValidate="myInput" ErrorMessage="Phải từ để tìm kiếm" Display="Dynamic"></asp:RequiredFieldValidator>
                         </div>
-                        <input class="search-submit" type="submit" value="Tìm kiếm">
+                        <asp:Button class="search-submit" ID="btnSearch"  runat="server" Text="Tìm kiếm" OnClick="btnSearch_Click" />
                     </div>
                     <nav class="site-nav">
                         <asp:Repeater ID="menuRepeater" runat="server">
                             <ItemTemplate>
                                 <ul>
-                                    <li><a href='<%# Eval("Link") %>'><%# Eval("Title") %></a></li>
+                                    <li><a href='CardByCategory.aspx?id=<%# Eval("Link") %>'><%# Eval("Title") %></a></li>
                                 </ul>
                             </ItemTemplate>
                         </asp:Repeater>
@@ -57,7 +58,10 @@
                         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
 
                         </asp:ContentPlaceHolder>
+
+
                     </div>
+     
                 </div>
                 <div class="content__column">
                     <div class="content__column_1">
@@ -66,6 +70,7 @@
                     </div>
                 </div>
             </div>
+          
             <div class="footer">
                 <div style="width: 78px"></div>
                 <div class="footer__main">

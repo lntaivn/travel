@@ -86,10 +86,15 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <Content Include="admin\admin_Create_Update.aspx" />
     <Content Include="admin\home.aspx" />
     <Content Include="css\admin.css" />
     <Content Include="css\admin_Create_Update.css" />
+=======
+    <Content Include="CardByCategory.aspx" />
+    <Content Include="css\detail.css" />
+>>>>>>> 5bb7f41ae201b630d5377b1ed18b4795b4c4731e
     <Content Include="css\layout.css" />
     <Content Include="css\autocomlate.css" />
     <Content Include="css\layout_post.css" />
@@ -98,11 +103,12 @@
     <Content Include="img_design\header_banner.jpg" />
     <Content Include="js\autocomplate.js" />
     <Content Include="MT_detail.aspx" />
-    <Content Include="post_details.aspx" />
+    <Content Include="searchByTitle.aspx" />
     <Content Include="TrangChu.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <Compile Include="admin\admin_Create_Update.aspx.cs">
       <DependentUpon>admin_Create_Update.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -123,6 +129,14 @@
     </Compile>
     <Compile Include="Create_Update.Master.designer.cs">
       <DependentUpon>Create_Update.Master</DependentUpon>
+=======
+    <Compile Include="CardByCategory.aspx.cs">
+      <DependentUpon>CardByCategory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CardByCategory.aspx.designer.cs">
+      <DependentUpon>CardByCategory.aspx</DependentUpon>
+>>>>>>> 5bb7f41ae201b630d5377b1ed18b4795b4c4731e
     </Compile>
     <Compile Include="MT_detail.aspx.cs">
       <DependentUpon>MT_detail.aspx</DependentUpon>
@@ -131,14 +145,14 @@
     <Compile Include="MT_detail.aspx.designer.cs">
       <DependentUpon>MT_detail.aspx</DependentUpon>
     </Compile>
-    <Compile Include="post_details.aspx.cs">
-      <DependentUpon>post_details.aspx</DependentUpon>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="searchByTitle.aspx.cs">
+      <DependentUpon>searchByTitle.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="post_details.aspx.designer.cs">
-      <DependentUpon>post_details.aspx</DependentUpon>
+    <Compile Include="searchByTitle.aspx.designer.cs">
+      <DependentUpon>searchByTitle.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Template.Master.cs">
       <DependentUpon>Template.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

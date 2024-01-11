@@ -11,7 +11,7 @@ namespace travel
 {
 
 
-    public partial class MT_detail
+    public partial class searchByTitle
     {
 
         /// <summary>

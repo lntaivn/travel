@@ -1,5 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
+using System.Data.SqlClient;
+using System.Data;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -8,8 +11,9 @@ using Newtonsoft.Json;
 using System.Data.SqlClient;
 using System.Configuration;
 
+
 namespace travel
-{ 
+{
     public partial class Template : System.Web.UI.MasterPage
     {
         protected void Page_Load(object sender, EventArgs e)
@@ -17,11 +21,25 @@ namespace travel
             string[] blogIdArray = GetBlogIds();
 
             RegisterBlogIdsScript(blogIdArray);
+
             if (!IsPostBack)
             {
                 BindMenuData();
             }
         }
+
+        protected void btnSearch_Click(object sender, EventArgs e)
+        {
+            string text = myInput.Text.Trim();
+            if (text !="")
+            {
+                Response.Redirect($"searchByTitle.aspx?search={text}");
+
+            }
+
+        }
+
+
 
         private string[] GetBlogIds()
         {
@@ -51,9 +69,9 @@ namespace travel
             return blogTitles.ToArray();
         }
 
+
         private void RegisterBlogIdsScript(string[] blogIdArray)
         {
-         
             string jsonBlogIds = JsonConvert.SerializeObject(blogIdArray);
             string script = $"var blogIds = {jsonBlogIds}; console.log('Blog IDs:', blogIds);";
 
