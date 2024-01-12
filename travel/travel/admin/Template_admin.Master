@@ -12,8 +12,53 @@
 <body>
     <form id="form1" runat="server">
         <div>
-            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-            </asp:ContentPlaceHolder>
+            <div class="header__backgroud">
+            </div>
+
+            <div class="header__template">
+                <div>
+                    <nav class="site-nav-admin">
+                        <ul>
+                            <li><a href="trangchu_admin.aspx" style="color: white; font-weight: bold; margin: auto">Trang chủ</a></li>
+                        </ul>
+
+                    </nav>
+                </div>
+                <div class="header__template_body">
+                    <div class="header__template_autocomplete">
+                    </div>
+                    <nav class="site-nav-admin">
+
+                        <ul>
+                            <li><a href='blog.aspx'>Blog</a></li>
+                            <li><a href='category.aspx'>Category</a></li>
+                            <li><a href='location.aspx'>location</a></li>
+                        </ul>
+
+                    </nav>
+                    <nav class="site-nav-admin">
+
+                        <ul>
+                            <li><a href='logout.aspx'>đăng xuất</a></li>
+                        </ul>
+
+                    </nav>
+                </div>
+            </div>
+
+            <div class="column">
+                <div class="column__grid">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+            </div>
+            <div class="footer">
+                <div style="width: 78px"></div>
+                <div class="footer__main">
+                    <div>Authur: H-T-S</div>
+                </div>
+                <div style="width: 78px"></div>
+            </div>
         </div>
     </form>
 </body>

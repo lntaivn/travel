@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data.SqlClient;
@@ -15,6 +16,7 @@ namespace travel.admin
 {
     public partial class blog : System.Web.UI.Page
     {
+
         protected void Page_Load(object sender, EventArgs e)
         {
 

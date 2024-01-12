@@ -7,11 +7,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace travel
+namespace travel.admin
 {
 
 
-    public partial class MT_detail
+    public partial class trangchu_admin
     {
 
         /// <summary>
@@ -24,12 +24,30 @@ namespace travel
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl blogContainer;
 
         /// <summary>
-        /// top10 control.
+        /// gvBlog control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl top10;
+        protected global::System.Web.UI.WebControls.GridView gvBlog;
+
+        /// <summary>
+        /// gvLocation control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView gvLocation;
+
+        /// <summary>
+        /// gvCategory control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView gvCategory;
     }
 }
