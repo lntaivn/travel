@@ -49,8 +49,10 @@ namespace travel.admin
 
         }
         int idAdmin;
+        int idAdmin;
         protected void saveButton_Click(object sender, EventArgs e)
         {
+            string connectionString = ConfigurationManager.ConnectionStrings["DuLichConnectionString"].ConnectionString;
             string connectionString = ConfigurationManager.ConnectionStrings["DuLichConnectionString"].ConnectionString;
             try
             {
@@ -155,11 +157,12 @@ namespace travel.admin
 
                     ScriptManager.RegisterStartupScript(this, GetType(), "FileFormatValidation", "alert('No file selected for upload.');", true);
                 }
-            } catch (Exception ex) {
-               Response.Write("Error saving blog post data: " + ex.Message);
+            }
+            catch (Exception ex)
+            {
+                Response.Write("Error saving blog post data: " + ex.Message);
             }
         }
-
         protected void btnUpload_Click(object sender, EventArgs e)
         {
           

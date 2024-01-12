@@ -40,9 +40,25 @@ body {
     background-color: white;
 }
 .body_post_top10 {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
     width: 352px;
     min-height: 350px;
     background-color: white;
+}
+
+    .body_post_top10 a {
+        text-decoration: none;
+        color: #003C71;
+        cursor: pointer;
+        font-weight: bold;
+    }
+.body_post_top10 label {
+    font-size: 18px;
+    font-style: italic;
+    
 }
 .body_post_layout_grid {
     width: 352px;

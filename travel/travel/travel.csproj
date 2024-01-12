@@ -98,6 +98,7 @@
     <Content Include="css\admin-template.css" />
     <Content Include="css\blog.css" />
     <Content Include="css\detail.css" />
+    <Content Include="css\hompage_admin.css" />
     <Content Include="css\layout.css" />
     <Content Include="css\autocomlate.css" />
     <Content Include="css\layout_post.css" />

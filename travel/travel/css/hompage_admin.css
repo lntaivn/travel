@@ -1,0 +1,64 @@
+﻿.hompage_admin {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    padding: 20px;
+    font-size: 13pt;
+    line-height: 1.25;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+    text-align:center;
+}
+#ContentPlaceHolder1_blogContainer {
+    width:100%;
+}
+
+.hompage_admin_list_post {
+    margin-top: 20px;
+
+    width: 50%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+}
+.hompage_admin_dislay-column {
+
+    width: 20%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: flex-start;
+}
+/* Apply styles to the table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+/* Style for table headers */
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: justify;
+    
+    
+}
+
+/* Add background color to alternate rows */
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Style the header row */
+th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+

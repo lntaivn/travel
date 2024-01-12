@@ -59,12 +59,12 @@
     padding: 5px;
 }
 
-    .post__display-summary input {
+    .post__display-summary textarea {
         padding: 5px;
         font-size: 14pt;
     }
 
-        .post__display-summary input:focus {
+        .post__display-summary textarea:focus {
             outline: none; /* Remove the default focus outline */
             border: none; /* Remove the border on focus */
             /* Add any additional styling you need for the focused state */
