@@ -86,11 +86,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="admin\Alone-Create.aspx" />
     <Content Include="admin\blog.aspx" />
     <Content Include="admin\category.aspx" />
     <Content Include="admin\location.aspx" />
     <Content Include="admin\updateBlog.aspx" />
     <Content Include="CardByCategory.aspx" />
+    <Content Include="css\blog.css" />
     <Content Include="css\detail.css" />
     <Content Include="css\layout.css" />
     <Content Include="css\autocomlate.css" />
@@ -99,12 +101,20 @@
     <Content Include="img_design\header.jpg" />
     <Content Include="img_design\header_banner.jpg" />
     <Content Include="js\autocomplate.js" />
+    <Content Include="js\post.js" />
     <Content Include="MT_detail.aspx" />
     <Content Include="searchByTitle.aspx" />
     <Content Include="TrangChu.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="admin\Alone-Create.aspx.cs">
+      <DependentUpon>Alone-Create.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\Alone-Create.aspx.designer.cs">
+      <DependentUpon>Alone-Create.aspx</DependentUpon>
+    </Compile>
     <Compile Include="admin\blog.aspx.cs">
       <DependentUpon>blog.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -197,7 +207,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="img_post\" />
+    <Folder Include="Images\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
