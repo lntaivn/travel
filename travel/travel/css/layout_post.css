@@ -34,16 +34,28 @@ body {
     height: 100%;
     background-color: white;
 }
+.body_post_map {
+    width: 352px;
+    height: 350px;
+    background-color: white;
+}
 .body_post_top10 {
     width: 352px;
-    height: 424px;
+    min-height: 350px;
     background-color: white;
+}
+.body_post_layout_grid {
+    width: 352px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 .main_post_tatail {
     width: 100%;
     height: auto;
     display: flex;
-    justify-content:center;
+    justify-content: center;
     align-items: center;
 }
 

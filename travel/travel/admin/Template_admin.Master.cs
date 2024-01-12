@@ -11,7 +11,11 @@ namespace travel.admin
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (Session["UserID"] == null)
+            {
+                // Nếu chưa đăng nhập, chuyển hướng về trang đăng nhập
+                Response.Redirect("login.aspx");
+            }
         }
     }
 }

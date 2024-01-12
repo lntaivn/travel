@@ -89,12 +89,17 @@
     <Content Include="admin\blog.aspx" />
     <Content Include="admin\category.aspx" />
     <Content Include="admin\location.aspx" />
+    <Content Include="admin\logout.aspx" />
+    <Content Include="admin\trangchu_admin.aspx" />
     <Content Include="admin\updateBlog.aspx" />
+    <Content Include="admin\login.aspx" />
     <Content Include="CardByCategory.aspx" />
+    <Content Include="css\admin_template.css" />
     <Content Include="css\detail.css" />
     <Content Include="css\layout.css" />
     <Content Include="css\autocomlate.css" />
     <Content Include="css\layout_post.css" />
+    <Content Include="css\login.css" />
     <Content Include="img_design\demo1.png" />
     <Content Include="img_design\header.jpg" />
     <Content Include="img_design\header_banner.jpg" />
@@ -126,6 +131,13 @@
     <Compile Include="admin\location.aspx.designer.cs">
       <DependentUpon>location.aspx</DependentUpon>
     </Compile>
+    <Compile Include="admin\logout.aspx.cs">
+      <DependentUpon>logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\logout.aspx.designer.cs">
+      <DependentUpon>logout.aspx</DependentUpon>
+    </Compile>
     <Compile Include="admin\Template_admin.Master.cs">
       <DependentUpon>Template_admin.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -133,12 +145,26 @@
     <Compile Include="admin\Template_admin.Master.designer.cs">
       <DependentUpon>Template_admin.Master</DependentUpon>
     </Compile>
+    <Compile Include="admin\trangchu_admin.aspx.cs">
+      <DependentUpon>trangchu_admin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\trangchu_admin.aspx.designer.cs">
+      <DependentUpon>trangchu_admin.aspx</DependentUpon>
+    </Compile>
     <Compile Include="admin\updateBlog.aspx.cs">
       <DependentUpon>updateBlog.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="admin\updateBlog.aspx.designer.cs">
       <DependentUpon>updateBlog.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\login.aspx.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\login.aspx.designer.cs">
+      <DependentUpon>login.aspx</DependentUpon>
     </Compile>
     <Compile Include="CardByCategory.aspx.cs">
       <DependentUpon>CardByCategory.aspx</DependentUpon>

@@ -7,29 +7,20 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace travel
+namespace travel.admin
 {
 
 
-    public partial class MT_detail
+    public partial class logout
     {
 
         /// <summary>
-        /// blogContainer control.
+        /// form1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl blogContainer;
-
-        /// <summary>
-        /// top10 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl top10;
+        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
     }
 }
