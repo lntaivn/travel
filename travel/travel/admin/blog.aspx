@@ -40,7 +40,7 @@
                 </div>
 
                 <div class="post__display-summary">
-                <asp:TextBox ID="summary" Width="100%" BorderStyle="None" placeholder="Insert summary" runat="server">
+                <asp:TextBox ID="summary" Width="100%" BorderStyle="None" placeholder="Insert summary" runat="server" TextMode="MultiLine">
 
                 </asp:TextBox>
                 </div>

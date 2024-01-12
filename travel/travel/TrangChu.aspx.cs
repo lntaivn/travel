@@ -35,11 +35,10 @@ namespace travel
                             string location = reader["location"].ToString();
                             string content = reader["summary"].ToString();
                             string bannerUrl = reader["banner"].ToString();
-                            string urldemo = "img_design/demo1.png";
 
                             blog.Add($"" +
                                 $"<a href='MT_detail.aspx?id={_id}' class='blogContainer__card'>" +
-                                $"<img src='{urldemo}' alt='Blog Image'>" +
+                                $"<img src='.{bannerUrl}' alt='Blog Image'>" +
                                 $"<div style=' padding: 20px; gap:10px; display: flex;'><p>{admin}</p>" +
                                 $"<p> -  {location}</p></div>" +
                                 $"<h3 style='color: #003C71; text-align: center; padding: 0 10px;'>{title}</h3><div  style='padding:0 20px;width: 100%;text-align:justify; style='color: #000;''>{content}</div>" +

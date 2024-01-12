@@ -8,6 +8,8 @@
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
     <link href="../css/blog.css" rel="stylesheet" />
+    <link href="../css/admin-template.css" rel="stylesheet" />
+    <link href="../css/hompage_admin.css" rel="stylesheet" />
 </head>
 <body>
     <form id="form1" runat="server">

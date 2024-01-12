@@ -34,10 +34,10 @@ namespace travel
                                     string contentMarkdown = reader["content"].ToString();
                                     string contentHtml = Markdown.ToHtml(contentMarkdown);
                                     string idLocaltion = reader["id_location"].ToString();
-                                    string urldemo = "img_design/demo1.png";
+                                    string banner = reader["banner"].ToString();
                                     showTop5(parameterValue, idLocaltion);
                                     // Tạo HTML với content đã chuyển đổi
-                                    string blogEntry = $"<div class='blogContainer__detail'><img src='{urldemo}' alt='Blog Image'>" +
+                                    string blogEntry = $"<div class='blogContainer__detail'><img src='./{banner}' alt='Blog Image'>" +
                                         $"<div class='contentHTML'><p>{contentHtml}</p></div></div>";
                                     LiteralControl blogEntryControl = new LiteralControl(blogEntry);
                                     blogContainer.Controls.Add(blogEntryControl);
@@ -64,11 +64,12 @@ namespace travel
                         while (reader.Read())
                         {
                             
+                            string id_post = reader["id_post"].ToString();
                             string titel = reader["title"].ToString();
 
                             // Tạo HTML với content đã chuyển đổi
                             string blogEntry = $"<div class='blogContainer__detail'>" +
-                                $"<div><p>{titel}</p></div></div>";
+                                $"<div><a href='MT_detail.aspx?id={id_post}'>{titel}</a></div></div>";
                             LiteralControl blogEntryControl = new LiteralControl(blogEntry);
                             top10.Controls.Add(blogEntryControl);
                         }

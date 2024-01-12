@@ -48,15 +48,13 @@ namespace travel.admin
             }
 
         }
+        int idAdmin;
         protected void saveButton_Click(object sender, EventArgs e)
         {
-      
+            string connectionString = ConfigurationManager.ConnectionStrings["DuLichConnectionString"].ConnectionString;
             try
             {
-                
 
-                int idAdmin = 1; // Replace with the actual admin ID
- 
                 if (categoryDropdown.SelectedIndex == 0)
                 {
                     ScriptManager.RegisterStartupScript(this, GetType(), "CategoryNotSelected", "alert('Please select a category.');", true);
@@ -99,8 +97,31 @@ namespace travel.admin
                     bannerPath = Path.Combine("/Images/", FN);
 
                     Response.Write("File uploaded successfully!");
-                    string connectionString = ConfigurationManager.ConnectionStrings["DuLichConnectionString"].ConnectionString;
 
+                    string username = Session["UserID"] as string;
+
+
+                    if (!string.IsNullOrEmpty(username))
+                    {
+                        using (SqlConnection connection = new SqlConnection(connectionString))
+                        {
+                            connection.Open();
+
+                            string query = "SELECT id_admin FROM admin WHERE name = @username;";
+
+                            using (SqlCommand command = new SqlCommand(query, connection))
+                            {
+                                command.Parameters.AddWithValue("@username", username);
+
+                                object result = command.ExecuteScalar();
+
+                                if (result != null)
+                                {
+                                    idAdmin = Convert.ToInt32(result);
+                                }
+                            }
+                        }
+                    }
                     using (SqlConnection connection = new SqlConnection(connectionString))
                     {
                         connection.Open();
@@ -134,11 +155,12 @@ namespace travel.admin
 
                     ScriptManager.RegisterStartupScript(this, GetType(), "FileFormatValidation", "alert('No file selected for upload.');", true);
                 }
-            } catch (Exception ex) {
-               Response.Write("Error saving blog post data: " + ex.Message);
+            }
+            catch (Exception ex)
+            {
+                Response.Write("Error saving blog post data: " + ex.Message);
             }
         }
-
         protected void btnUpload_Click(object sender, EventArgs e)
         {
           
