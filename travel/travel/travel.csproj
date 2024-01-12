@@ -95,6 +95,7 @@
     <Content Include="admin\updateBlog.aspx" />
     <Content Include="admin\login.aspx" />
     <Content Include="CardByCategory.aspx" />
+    <Content Include="css\admin-template.css" />
     <Content Include="css\blog.css" />
     <Content Include="css\detail.css" />
     <Content Include="css\layout.css" />
