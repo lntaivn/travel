@@ -56,14 +56,14 @@
 }
 
 .column__grid {
-    width: 99%;
+    width: 100%;
     max-width: 1400px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, 2fr));
     align-items: start;
     gap: 5px 10px;
     justify-items: center;
-    height: 526px;
+    /**/
 }
 
 #blogContainer {

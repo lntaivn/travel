@@ -49,12 +49,14 @@ namespace travel.admin
 
         }
         int idAdmin;
+        int idAdmin;
         protected void saveButton_Click(object sender, EventArgs e)
         {
             string connectionString = ConfigurationManager.ConnectionStrings["DuLichConnectionString"].ConnectionString;
+            string connectionString = ConfigurationManager.ConnectionStrings["DuLichConnectionString"].ConnectionString;
             try
             {
-
+               
                 if (categoryDropdown.SelectedIndex == 0)
                 {
                     ScriptManager.RegisterStartupScript(this, GetType(), "CategoryNotSelected", "alert('Please select a category.');", true);
@@ -100,7 +102,7 @@ namespace travel.admin
 
                     string username = Session["UserID"] as string;
 
-
+                    
                     if (!string.IsNullOrEmpty(username))
                     {
                         using (SqlConnection connection = new SqlConnection(connectionString))
