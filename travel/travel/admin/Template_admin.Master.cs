@@ -11,11 +11,18 @@ namespace travel.admin
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+<<<<<<< HEAD
             if (Session["UserID"] == null)
             {
 
                 Response.Redirect("login.aspx");
             }
+=======
+            //if (Session["UserID"] == null)
+            //{
+            //    Response.Redirect("login.aspx");
+            //}
+>>>>>>> cb117e9c73e486f9ebb739e0b35a1322a231d207
         }
     }
 }

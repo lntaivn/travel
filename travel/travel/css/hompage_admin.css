@@ -15,24 +15,20 @@
 }
 
 .hompage_admin_list_post {
-    margin-top: 20px;
-
     width: 50%;
     height: 100%;
     flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-
+    justify-content: flex-start;
+    align-items: center;
 }
 .hompage_admin_dislay-column {
-
     width: 20%;
     height: 100%;
     display: flex;
     flex-direction: column;
     gap: 10px;
-    justify-content: center;
-    align-items: flex-start;
+    justify-content: flex-start;
+    align-items: center;
 }
 /* Apply styles to the table */
 table {
@@ -49,7 +45,10 @@ th, td {
     
     
 }
-
+td a {
+    text-decoration: none;
+   cursor: pointer;
+}
 /* Add background color to alternate rows */
 tr:nth-child(even) {
     background-color: #f2f2f2;

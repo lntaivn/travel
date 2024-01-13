@@ -14,16 +14,16 @@ namespace travel.admin
 {
     public partial class updateBlog : System.Web.UI.Page
     {
+        string ImgTemp ="";
+      
+       
         protected void Page_Load(object sender, EventArgs e)
         {
-            Response.Write("dc");
-
+           
             if (!IsPostBack)
             {
-
                 // Fetch category data from the database
                 List<Category> categories = GetCategoriesFromDatabase();
-
                 // Bind the category data to the DropDownList
                 categoryDropdown.DataSource = categories;
                 categoryDropdown.DataTextField = "Name";
@@ -47,14 +47,21 @@ namespace travel.admin
 
 
                 // cho mặc định id_post = 1
-                string parameterValue = "10";
+                string parameterValue = Request.QueryString["idPost"];
                 if (!string.IsNullOrEmpty(parameterValue))
                 {
                     string connectionString = ConfigurationManager.ConnectionStrings["DuLichConnectionString"].ConnectionString;
                     using (SqlConnection connection = new SqlConnection(connectionString))
                     {
                         connection.Open();
-                        string query = $"SELECT b.id_post,b.content, b.banner, b.summary, b.title, c.id_category as category, ad.name as admin, l.id_location as location  FROM blog as b \r\njoin category as c on b.id_category = c.id_category \r\njoin admin as ad on b.id_admin = ad.id_admin\r\njoin location as l on b.id_location = l.id_location where b.id_post = 10";
+                        string query = $"SELECT b.id_post,b.content, " +
+                            $"b.banner, b.summary, b.title, " +
+                            $"c.id_category as category, ad.name as admin, " +
+                            $"l.id_location as location  FROM blog as b " +
+                            $"join category as c on b.id_category = c.id_category " +
+                            $"join admin as ad on b.id_admin = ad.id_admin " +
+                            $"join location as l on b.id_location = l.id_location " +
+                            $"where b.id_post = {parameterValue}";
 
                         using (SqlCommand command = new SqlCommand(query, connection))
                         {
@@ -62,14 +69,14 @@ namespace travel.admin
                             {
                                 while (reader.Read())
                                 {
-                                    Response.Write("dc");
                                     postTitle.Text = reader["title"].ToString();
                                     locationDropDownList.SelectedValue = reader["location"].ToString();
                                     categoryDropdown.SelectedValue = reader["category"].ToString();
                                     article_body_markdown.Text = reader["content"].ToString();
                                     summary.Text = reader["summary"].ToString();
                                     preview.ImageUrl = reader["banner"].ToString();
-                                    //addImageButton.T = 
+                                    ImgTemp = reader["banner"].ToString();
+ 
                                 }
                             }
                         }
@@ -123,9 +130,9 @@ namespace travel.admin
                         ScriptManager.RegisterStartupScript(this, GetType(), "FileFormatValidation", "alert('Invalid file format. Please choose a valid image file.');", true);
                         return;
                     }
-                    bannerPath = Path.Combine("/Images/", FN);
+                    bannerPath = "/Images/"+FN;
 
-                    Response.Write("File uploaded successfully!");
+                    Response.Write(1);
 
                     string username = Session["UserID"] as string;
 
@@ -151,12 +158,20 @@ namespace travel.admin
                             }
                         }
                     }
+
+                    string parameterValue = Request.QueryString["idPost"];
                     using (SqlConnection connection = new SqlConnection(connectionString))
                     {
                         connection.Open();
-
-                        string query = "INSERT INTO blog (id_admin, id_category, id_location, title, content, summary, banner) " +
-              "VALUES (@IdAdmin, @IdCategory, @IdLocation, @Title, @Content, @Summary, @Banner)";
+                        string query = "UPDATE blog " +
+                                       "SET id_admin = @IdAdmin, " +
+                                       "    id_category = @IdCategory, " +
+                                       "    id_location = @IdLocation, " +
+                                       "    title = @Title, " +
+                                       "    content = @Content, " +
+                                       "    summary = @Summary, " +
+                                       "    banner = @Banner " +
+                                       $"WHERE id_post = {parameterValue}";
 
                         using (SqlCommand command = new SqlCommand(query, connection))
                         {
@@ -167,16 +182,31 @@ namespace travel.admin
                             command.Parameters.AddWithValue("@Content", content);
                             command.Parameters.AddWithValue("@Summary", summaryValue);
                             command.Parameters.AddWithValue("@Banner", bannerPath);
-                            command.ExecuteNonQuery();
+                            // Provide the id_post value to identify the record to update
 
+                            command.ExecuteNonQuery();
                         }
                     }
+                    
 
                     fileName = Path.GetFileName(addImageButton.PostedFile.FileName);
                     string uploadFolder = Server.MapPath("~/Images/");
                     string filePath = Path.Combine(uploadFolder, fileName);
-                    addImageButton.PostedFile.SaveAs(filePath);
-                    ScriptManager.RegisterStartupScript(this, GetType(), "SaveSuccess", "alert('Blog post data saved successfully!'); window.location.href = 'trangchu_admin.aspx';", true);
+                    string valuedelete = "~/" + ImgTemp;
+                    Response.Write(valuedelete);
+                    
+                    // Kiểm tra xem hình ảnh đã tồn tại trong thư mục hay chưa
+                    if (!File.Exists(filePath))
+                    {
+                        File.Delete(valuedelete);
+                        addImageButton.PostedFile.SaveAs(filePath);
+                        Response.Write("File uploaded successfully!");
+                    }
+                    else
+                    {
+                        Response.Write("File already exists in the folder.");
+                    }
+                    ScriptManager.RegisterStartupScript(this, GetType(), "SaveSuccess", "alert('Blog post data update successfully!'); window.location.href = 'trangchu_admin.aspx';", true);
 
                 }
                 else

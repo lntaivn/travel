@@ -94,6 +94,8 @@
     <Content Include="admin\trangchu_admin.aspx" />
     <Content Include="admin\updateBlog.aspx" />
     <Content Include="admin\login.aspx" />
+    <Content Include="admin\updateCategory.aspx" />
+    <Content Include="admin\updatelocation.aspx" />
     <Content Include="CardByCategory.aspx" />
     <Content Include="css\admin-template.css" />
     <Content Include="css\blog.css" />
@@ -102,6 +104,7 @@
     <Content Include="css\layout.css" />
     <Content Include="css\autocomlate.css" />
     <Content Include="css\layout_post.css" />
+    <Content Include="css\location.css" />
     <Content Include="css\login.css" />
     <Content Include="img_design\demo1.png" />
     <Content Include="img_design\header.jpg" />
@@ -176,6 +179,20 @@
     </Compile>
     <Compile Include="admin\login.aspx.designer.cs">
       <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\updateCategory.aspx.cs">
+      <DependentUpon>updateCategory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\updateCategory.aspx.designer.cs">
+      <DependentUpon>updateCategory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\updatelocation.aspx.cs">
+      <DependentUpon>updatelocation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\updatelocation.aspx.designer.cs">
+      <DependentUpon>updatelocation.aspx</DependentUpon>
     </Compile>
     <Compile Include="CardByCategory.aspx.cs">
       <DependentUpon>CardByCategory.aspx</DependentUpon>

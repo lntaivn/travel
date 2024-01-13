@@ -13,7 +13,7 @@ namespace travel
 {
     public partial class template_detail : System.Web.UI.MasterPage
     {
-         protected string x;
+        protected string x;
         protected void Page_Load(object sender, EventArgs e)
         {
 

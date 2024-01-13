@@ -8,7 +8,20 @@
     border-radius: 3px;
     /* Space between the editor and the guide */
 }
-
+.author-form__tooltip:last-child {
+ 
+}
+#ContentPlaceHolder1_saveButton {
+    height: 50px;
+    font-size: 18px;
+    background-color: #003C71;
+    width: 50%;
+    border-radius: 50px;
+    border: 1px solid white;
+    font-weight: bold;
+    color: white;
+    margin:5px auto;
+}
 .post__display-textare {
     display: flex;
     flex-direction: column;
@@ -132,13 +145,20 @@
     width: 100%;
     max-width: 826px;
 }
+    .author-form__tooltip input{
+        margin-top:5px;
+        font-size: 17px;
+        text-align: center;
+        min-width: 20px;
+        border-radius: 5px;
+    }
 
-.authur_form__header {
-    width: 806px;
-    max-width: 806px;
-    display: flex;
-    flex-direction: column;
-}
+    .authur_form__header {
+        width: 806px;
+        max-width: 806px;
+        display: flex;
+        flex-direction: column;
+    }
 /* 672 */
 .toolbar button {
     background: none;
@@ -175,12 +195,7 @@
     display: inline-block;
     font-size: 13pt;
     line-height: 1.15;
-    input
-
-{
-    margin-top: 8px !important;
-}
-
+ 
 }
 
 .tooltip .tooltiptext {

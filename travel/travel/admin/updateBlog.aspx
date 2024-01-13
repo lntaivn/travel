@@ -4,16 +4,15 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="main__author">
     <div>
-        <h2>Create Blog Post</h2>
+        <h2>Update Blog Post</h2>
     </div>
     <div class="post-creation">
         <div class="post__display">
 
             <asp:Image ID="preview" UseSubmitBehavior="False" runat="server" Style="max-width: 300px; max-height: 300px; margin-top: 20px;" />
-
             <div class="post__display-add-img">
                 <asp:FileUpload ID="addImageButton" runat="server" CssClass="yourCSSClass" onchange="triggerFileInput()" UseSubmitBehavior="False"/>
-                <asp:Button ID="btnCancel" runat="server" Text="Cancel" OnClientClick="return cancelUpload();" />
+              
             </div>
             
 
@@ -72,7 +71,7 @@
 
         </div>
 
-        <asp:TextBox ID="article_body_markdown" Height="400px" name="article_body_markdown" runat="server" TextMode="MultiLine" CssClass="textarea"
+        <asp:TextBox ID="article_body_markdown" Width="807px" Height="400px" name="article_body_markdown" runat="server" TextMode="MultiLine" CssClass="textarea"
             placeholder="Write your post content here..."></asp:TextBox>
 
         <asp:Button ID="saveButton" runat="server" Text="Save" OnClientClicking="return savePost()" OnClick="saveButton_Click" />

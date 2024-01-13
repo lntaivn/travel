@@ -36,7 +36,8 @@
                     <div class="body_post_layout_grid">
                         <div class="body_post_map">
                             <%-- hien ban do --%>
-                            <%= x %>
+                            
+                            <iframe src="<%= x %>" style="border:0; width: 352px !important; height: 350px !important;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                         </div>
                         <div class="body_post_top10">
                             <label>Bài đề xuất: </label>
