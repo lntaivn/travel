@@ -49,10 +49,8 @@ namespace travel.admin
 
         }
         int idAdmin;
-        int idAdmin;
         protected void saveButton_Click(object sender, EventArgs e)
         {
-            string connectionString = ConfigurationManager.ConnectionStrings["DuLichConnectionString"].ConnectionString;
             string connectionString = ConfigurationManager.ConnectionStrings["DuLichConnectionString"].ConnectionString;
             try
             {
@@ -140,6 +138,7 @@ namespace travel.admin
                             command.Parameters.AddWithValue("@Content", content);
                             command.Parameters.AddWithValue("@Summary", summaryValue);
                             command.Parameters.AddWithValue("@Banner", bannerPath);
+                            Response.Write(command.ToString());
                             command.ExecuteNonQuery();
 
                         }

@@ -62,9 +62,11 @@
     
 }
 
-.blogContainer__card h2 {
+
+
+.blogContainer__card h3 {
     text-align: center;
-    
+    font-size: 1.5rem;
 }
 
     .blogContainer__card:hover {

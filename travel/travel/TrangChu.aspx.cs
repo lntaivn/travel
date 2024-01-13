@@ -39,7 +39,7 @@ namespace travel
                             blog.Add($"" +
                                 $"<a href='MT_detail.aspx?id={_id}' class='blogContainer__card'>" +
                                 $"<img src='.{bannerUrl}' alt='Blog Image'>" +
-                                $"<div style=' padding: 20px; gap:10px; display: flex;'><p>{admin}</p>" +
+                                $"<div style=' padding: 0px 20px;gap: 7px;display: flex;margin-top: 10px'><p>{admin}</p>" +
                                 $"<p> -  {location}</p></div>" +
                                 $"<h3 style='color: #003C71; text-align: center; padding: 0 10px;'>{title}</h3><div  style='padding:0 20px;width: 100%;text-align:justify; style='color: #000;''>{content}</div>" +
                                 $"</a>");
