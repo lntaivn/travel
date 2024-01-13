@@ -19,5 +19,35 @@ namespace travel.admin
 
 
         
+        protected void btnUpdatecategory_Click(object sender, EventArgs e)
+        {
+
+            string name = txtName.Text;
+
+            AddCategoryToDatabase(name);
+
+        }
+
+        private void AddCategoryToDatabase(string name)
+        {
+            try
+            {
+                string connectionString = ConfigurationManager.ConnectionStrings["DuLichConnectionString"].ConnectionString;
+
+                using (SqlConnection con = new SqlConnection(connectionString))
+                {
+                    using (SqlCommand cmd = new SqlCommand("INSERT INTO category (name) VALUES (@Name)", con))
+                    {
+                        cmd.Parameters.AddWithValue("@Name", name);
+                        con.Open();
+                        cmd.ExecuteNonQuery();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Response.Write("Error adding category: " + ex.Message);
+            }
+        }
     }
 }

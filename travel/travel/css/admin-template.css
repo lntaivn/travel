@@ -23,7 +23,7 @@
     justify-content: inherit;
     align-items: center;
     flex: 1;
-    max-width: 1200px
+    width:100%;
 }
 
 .content {
@@ -38,7 +38,7 @@
 
 .footer__main {
     flex: 1;
-    background-color: #01B6B1;
+ 
     display: flex;
     color: white;
     justify-content: center;
@@ -46,18 +46,21 @@
     font-size: 20px;
     font-weight: bold;
 }
-
+body {
+    background-color: white;
+}
 .column {
     display: flex;
     height: 100%;
     padding: 10px;
     width: 100%;
     min-height: 950px;
+
 }
 
 .column__grid {
     width: 100%;
-    max-width: 1400px;
+    
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, 2fr));
     align-items: start;

@@ -13,7 +13,6 @@ namespace travel.admin
         {
             //if (Session["UserID"] == null)
             //{
-
             //    Response.Redirect("login.aspx");
             //}
         }

@@ -11,7 +11,7 @@ namespace travel.admin
 {
 
 
-    public partial class category
+    public partial class updateCategory_aspx
     {
 
         /// <summary>

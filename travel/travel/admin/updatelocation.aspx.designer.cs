@@ -11,7 +11,7 @@ namespace travel.admin
 {
 
 
-    public partial class category
+    public partial class updatelocation
     {
 
         /// <summary>
@@ -33,12 +33,30 @@ namespace travel.admin
         protected global::System.Web.UI.WebControls.TextBox txtName;
 
         /// <summary>
-        /// btnUpdatecategory control.
+        /// lblIframe control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnUpdatecategory;
+        protected global::System.Web.UI.WebControls.Label lblIframe;
+
+        /// <summary>
+        /// txtIframe control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtIframe;
+
+        /// <summary>
+        /// btnUpdateLocation control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnUpdateLocation;
     }
 }
